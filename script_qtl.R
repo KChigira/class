@@ -1,3 +1,4 @@
+install.packages("qtl")
 library(qtl)
 
 #read genotype data
@@ -80,3 +81,4 @@ list <- list(data$Absorption[which(data[,5] == "A")], data$Absorption[which(data
 boxplot(list)
 list <- list(data$Absorption_2[which(data[,5] == "A")], data$Absorption_2[which(data[,5] == "B")])
 boxplot(list)
+

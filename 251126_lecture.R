@@ -37,3 +37,9 @@ text(ld_1.select$PC1[1:10]*0.05, ld_1.select$PC2[1:10]*0.05, rownames(ld_1.selec
 
 #Search OTU
 data[data$OTU %in% rownames(ld_1.select)[1:10], ]
+
+
+#Additional
+data.select <- data[data$Class %in% c("Bacillales", "Rhizobiales"), ]
+apply(data.select[data.select$Class == "Bacillales", 2:5], 2, sum)
+apply(data.select[data.select$Class == "Rhizobiales", 2:5], 2, sum)
